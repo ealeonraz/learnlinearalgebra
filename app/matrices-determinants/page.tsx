@@ -3,6 +3,8 @@ import { Section } from '../types/types';
 import styles from './page.module.css';
 import CreateCard from '../components/sectionscard';
 
+export const runtime = "edge";
+
 export default async function Fundamentals() {
   const chatperName = 'Matrices and Determinants'
   const data: Section[] = await queryData(chatperName);

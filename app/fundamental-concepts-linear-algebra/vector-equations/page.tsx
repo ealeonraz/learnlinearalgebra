@@ -4,6 +4,8 @@ import getProofs from '@/app/services/theoremServices';
 import 'katex/dist/katex.min.css';
 import DisplayProof  from '@/app/components/theoremsection';
 
+export const runtime = "edge";
+
 export default async function View() {
     const section = 'Vector Equations';
     const theorem: TheoremInfo[] = await getProofs(section);

@@ -4,6 +4,8 @@ import 'katex/dist/katex.min.css';
 import DisplayProof  from '@/app/components/theoremsection';
 import "../../globals.css";
 
+export const runtime = "edge";
+
 export default async function View() {
     const section = 'Row Reduction and Echelon Forms';
     const theorem: TheoremInfo[] = await getProofs(section);

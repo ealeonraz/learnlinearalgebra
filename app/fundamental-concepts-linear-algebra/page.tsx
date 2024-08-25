@@ -2,6 +2,8 @@ import queryData from '../services/services';
 import { Section } from '../types/types';
 import CreateCard from '../components/sectionscard';
 
+export const runtime = "edge";
+
 export default async function Fundamentals() {
   const chatperName = 'Fundamental Concepts in Linear Algebra'
   const data: Section[] = await queryData(chatperName);
