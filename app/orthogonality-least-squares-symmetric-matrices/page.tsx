@@ -3,8 +3,6 @@ import { Section } from '../types/types';
 import styles from './page.module.css'
 import CreateCard from '../components/sectionscard';
 
-export const runtime = "edge";
-
 export default async function Fundamentals() {
   const chatperName = "Orthogonality, Least Squares and Symmetric Matrices"
   const data: Section[] = await queryData(chatperName);

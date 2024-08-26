@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import { ChapterInfo } from "./types/types"
 import queryInfo from "./services/infoServices";
 
-export const runtime = "edge";
 
 export default async function  Home() {
 
