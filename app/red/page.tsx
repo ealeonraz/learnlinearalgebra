@@ -28,10 +28,6 @@ export default function Home() {
           `,
         }}
       />
-
-      <div>
-        Stop stalking me!
-      </div>
     </>
   );
 }
