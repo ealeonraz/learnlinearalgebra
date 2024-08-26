@@ -9,6 +9,7 @@ export default async function  Home() {
   const data: ChapterInfo[] = await queryInfo()
 
   return (
+    
     <div className={styles.main_info}>
       <h1 className={styles.main_header}>Getting started</h1>
       <div className={styles.main_par}>
