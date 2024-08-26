@@ -6,18 +6,6 @@ export const runtime = "edge";
 export default function Home() {
   return (
     <>
-      <Head>
-        {/* You can add other head elements here like title, meta tags */}
-        <title>Google Analytics Test</title>
-      </Head>
-
-      {/* External Google Analytics Script */}
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-WXRPDT3LXF"
-      />
-
-      {/* Inline Google Analytics Script */}
       <Script
         id="google-analytics"
         strategy="afterInteractive"
