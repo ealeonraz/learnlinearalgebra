@@ -1,11 +1,11 @@
 import { TheoremInfo } from '@/app/types/types';
-import './page.module.css';
+import "../../globals.css";
 import getProofs from '@/app/services/theoremServices';
 import 'katex/dist/katex.min.css';
 import DisplayProof  from '@/app/components/theoremsection';
 
 export default async function View() {
-    const section = 'Vector Equations';
+    const section = 'Linear Independence';
     const theorem: TheoremInfo[] = await getProofs(section);
     
     return (
