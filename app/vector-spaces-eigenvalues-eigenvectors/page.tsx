@@ -35,7 +35,6 @@ export default async function Fundamentals() {
           <CreateCard
             key = {chapter.section_key}
             sectionName={chapter.section_name}
-            sectionInfo={chapter.section_chapter}
             link={chapter.chapter_link.concat(chapter.section_link)}
           />
         ))}
