@@ -4,6 +4,7 @@ html, body {
   background-color: #d9d9d9;
   font-family: 'Roboto', sans-serif;
 }
+
 /*This section is for the header navigation*/
 .header-sec {
   display: flex;
@@ -93,12 +94,22 @@ svg:hover {
   flex: 1;
 }
 
-
+.forward-arrow, .back-arrow {
+  background-color: #577492;
+  border: #577492;
+}
+.forward-arrow:hover svg path, .back-arrow:hover  svg path{
+  fill: #CED4DA;
+}
+.page-sec  {
+  justify-content: right;
+}
 .proof_container {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Aligns the card at the top of the container */
   width: 100%;
+  height: 100%;
 }
 
 .proof_card {
@@ -149,7 +160,12 @@ svg:hover {
   .section_card {
     height: auto; /* Allow height to adjust naturally on mobile */
   }
-  
+  .proof_container {
+    width: 100%;
+  }
+  .proof_card{
+    width: 85%;
+  }
 }
 
 

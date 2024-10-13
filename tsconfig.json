@@ -41,7 +41,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/ClientLayout.tsx"  ],
   "exclude": [
     "node_modules"
   ]

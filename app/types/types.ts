@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Section {
     section_key: number,
     section_name: string,
@@ -37,4 +39,12 @@ export interface DisplayProofProps {
     theorem: string,
     proof_content: string,
     theorem_name: string
+}
+
+export interface ClientLayout {
+    children: React.ReactNode
+}
+
+export interface SectionCard {
+    
 }
