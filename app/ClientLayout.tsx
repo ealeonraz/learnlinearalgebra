@@ -24,7 +24,17 @@ export default function Client({ children }: ClientLayout) {
       "cramers-rules-volume-and-linear-transformations"
     ],
     "orthogonality-least-squares-symmetric-matrices":[],
-    "vector-spaces-eigenvalues-eigenvectors":[]
+    "/vector-spaces-eigenvalues-eigenvectors/": [
+      "vector-spaces-and-sub-spaces",
+      "null-spaces-column-spaces-and-linear-transformations",
+      "linearly-independent-sets-bases",
+      "coordinate-systems",
+      "the-dimension-of-a-vector-space",
+      "rank",
+      "eigenvectors-and-eigenvalues",
+      "the-characteristic-equation",
+      "diagonalization"
+    ]
   };
   const pathname = usePathname();
   const router = useRouter();
