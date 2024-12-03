@@ -14,9 +14,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ClientLayout>
+      <header className="header-sec">
+        <div className="title-sec">
+          <a className="nav-link nav-home" href="/">
+            Learn Linear Algebra
+          </a>
+        </div>
+      </header>
           {children}
-        </ClientLayout>
       </body>
     </html>
   );

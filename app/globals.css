@@ -126,11 +126,24 @@ svg:hover {
 .proof_card p {
   align-items: center;
 }
-
 .proof-container {
   text-align: center;
 }
-
+.button-sec {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f9f9;
+}
+.sec_btn {
+  flex: 1;
+  border: none;
+  background-color: #f9f9f9;
+}
+.sec_btn2 {
+  flex: 1;
+  border: none;
+  background-color: #f9f9f9;
+}
 /* Media queries for better responsiveness */
 @media screen and (max-width: 1200px) {
   .sections_cards {
@@ -168,6 +181,7 @@ svg:hover {
     width: 85%;
   }
 }
+
 
 
 
