@@ -135,14 +135,23 @@ svg:hover {
   background-color: #f9f9f9;
 }
 .sec_btn {
+  display: flex;
   flex: 1;
-  border: none;
   background-color: #f9f9f9;
+  justify-content: flex-end;
+  width: 100px;
 }
 .sec_btn2 {
+  display: flex;
   flex: 1;
-  border: none;
   background-color: #f9f9f9;
+  justify-content: flex-start;
+}
+.sec_btn, .sec_btn2 {
+  font-size: clamp(0.9rem, 2.5vw, 1rem); 
+  font-weight:bolder;
+  color: #577492;
+  display: inline-block;
 }
 /* Media queries for better responsiveness */
 @media screen and (max-width: 1200px) {
