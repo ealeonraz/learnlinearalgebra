@@ -19,6 +19,10 @@ export default async function View() {
                     theorem_name={proof.theorem_name}
                     />
                 ))}
+                <footer className="button-sec">
+                    <button className='sec_btn'>Previous</button>
+                    <button className='sec_btn2'>Next</button>
+                </footer>
             </div>
         </div>
     );

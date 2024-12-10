@@ -1,10 +1,9 @@
 html, body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   background-color: #d9d9d9;
   font-family: 'Roboto', sans-serif;
 }
-
 
 /*This section is for the header navigation*/
 .header-sec {
@@ -132,27 +131,40 @@ svg:hover {
 .button-sec {
   display: flex;
   flex-direction: row;
-  background-color: #f9f9f9;
+  justify-content: space-evenly; /* Space between buttons */
+  align-items: center; /* Vertically center buttons */
+  padding: 10px; /* Padding for footer */
+  background-color: #f9f9f9; /* Light footer background */
 }
-.sec_btn {
-  display: flex;
-  flex: 1;
-  background-color: #f9f9f9;
-  justify-content: flex-end;
-  width: 100px;
-}
-.sec_btn2 {
-  display: flex;
-  flex: 1;
-  background-color: #f9f9f9;
-  justify-content: flex-start;
-}
+
 .sec_btn, .sec_btn2 {
+  display: inline-block; /* Ensures buttons are inline */
+  padding: 10px 20px; /* Increase clickable area */
   font-size: clamp(0.9rem, 2.5vw, 1rem); 
-  font-weight:bolder;
-  color: #577492;
-  display: inline-block;
+  font-weight: bolder;
+  color: #fff; /* White text color */
+  background-color: #577492; /* Button background */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  text-align: center; /* Center align text */
 }
+
+.sec_btn:hover, .sec_btn2:hover {
+  background-color: #45627d; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.sec_btn:focus, .sec_btn2:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px #577492; /* Add custom focus glow */
+}
+
+.sec_btn + .sec_btn2 {
+  margin-left: 10px; /* Space between buttons */
+}
+
 /* Media queries for better responsiveness */
 @media screen and (max-width: 1200px) {
   .sections_cards {
