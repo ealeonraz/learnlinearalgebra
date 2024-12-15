@@ -5,8 +5,8 @@ import CreateCard from '../components/sectionscard';
 import Script from 'next/script';
 
 export default async function Matrices_Determinants() {
-  const chatperName = 'Matrices and Determinants'
-  const data: Section[] = await queryData(chatperName);
+  const chapterName = 'Matrices and Determinants'
+  const data: Section[] = await queryData(chapterName);
   return (
     <>
     {/* Google Analytics Script */}
@@ -28,7 +28,7 @@ export default async function Matrices_Determinants() {
     />
     <div className= "sections_body">
       <div className="sections_header">
-        {chatperName}     
+        {chapterName}     
       </div>
       <div className= "sections_cards">
         {data.map((chapter) => (

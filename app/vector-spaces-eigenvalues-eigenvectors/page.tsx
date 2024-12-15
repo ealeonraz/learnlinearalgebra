@@ -4,8 +4,8 @@ import CreateCard from '../components/sectionscard';
 import Script from 'next/script';
 
 export default async function Fundamentals() {
-  const chatperName = "Vector spaces, Eigenvalues, and eigenvectors"
-  const data: Section[] = await queryData(chatperName);
+  const chapterName = "Vector spaces, Eigenvalues, and eigenvectors"
+  const data: Section[] = await queryData(chapterName);
 
   return (
     <>
@@ -28,7 +28,7 @@ export default async function Fundamentals() {
     />
     <div className= "sections_body">
       <div className="sections_header">
-        {chatperName}     
+        {chapterName}     
       </div>
       <div className= "sections_cards">
         {data.map((chapter) => (
