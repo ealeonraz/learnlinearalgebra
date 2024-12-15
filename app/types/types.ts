@@ -45,6 +45,6 @@ export interface ClientLayout {
     children: React.ReactNode
 }
 
-export interface SectionCard {
-    
+export interface ProofViewProps {
+    proofInfo: TheoremInfo[]
 }
