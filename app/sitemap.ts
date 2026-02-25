@@ -1,13 +1,15 @@
 // /app/sitemap.ts
 import type { MetadataRoute } from "next";
+import queryInfo from "./services/infoServices";
+import getProofs from "./services/theoremServices";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnlinearalgebra.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const routes = [
+  const baseRoutes = [
     "",
     "/fundamental-concepts-linear-algebra",
     "/matrices-and-determinants",
@@ -15,10 +17,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/orthogonality-least-squares-symmetric-matrices",
   ];
 
-  return routes.map((path) => ({
-    url: new URL(path, SITE_URL).toString(),
+  const chapters = await queryInfo();
+  const proofs = await getProofs();
+
+  const chapterRoutes = chapters.map((chapter) => ({
+    url: new URL(chapter.chapter_link, SITE_URL).toString(),
     lastModified: now,
-    changeFrequency: "weekly",
-    priority: path === "" ? 1 : 0.7,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }));
+
+  const proofRoutes = proofs.map((proof) => ({
+    url: new URL(
+      `/${proof.theorem_section}/${proof.theorem_name}`,
+      SITE_URL
+    ).toString(),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [
+    ...baseRoutes.map((path) => ({
+      url: new URL(path, SITE_URL).toString(),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: path === "" ? 1 : 0.7,
+    })),
+    ...chapterRoutes,
+    ...proofRoutes,
+  ];
 }
