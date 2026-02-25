@@ -1,7 +1,6 @@
 import Latex from "react-latex-next";
 import 'katex/dist/katex.min.css';
 import { DisplayProofProps } from "../types/types";
-import "../globals.css";
 
 const DisplayProof = (theorem: DisplayProofProps): JSX.Element => {
     return (

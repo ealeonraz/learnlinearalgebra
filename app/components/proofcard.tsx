@@ -3,7 +3,6 @@ import {ProofViewProps, TheoremInfo } from '@/app/types/types';
 import getProofs from '@/app/services/theoremServices';
 import 'katex/dist/katex.min.css';
 import DisplayProof  from '@/app/components/theoremsection';
-import "../globals.css";
 import { usePathname, useRouter } from 'next/navigation';
 
 const ProofView = ({proofInfo}: ProofViewProps ): JSX.Element => {
