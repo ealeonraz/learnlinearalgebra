@@ -1,7 +1,7 @@
 // /app/sitemap.ts
 import type { MetadataRoute } from "next";
 import queryInfo from "./services/infoServices";
-import getProofs from "./services/theoremServices";
+import { getAllProofs } from "./services/theoremServices";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://learnlinearalgebra.com";
@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const chapters = await queryInfo();
-  const proofs = await getProofs();
+  const proofs = await getAllProofs();
 
   const chapterRoutes = chapters.map((chapter) => ({
     url: new URL(chapter.chapter_link, SITE_URL).toString(),

@@ -13,3 +13,10 @@ export default async function getProofs(section_name: string): Promise<TheoremIn
     }
 
 }
+export async function getAllProofs() {
+    const res = await pool.query(
+      "SELECT theorem_section, theorem_name FROM theorems;"
+    );
+  
+    return res.rows;
+  }
