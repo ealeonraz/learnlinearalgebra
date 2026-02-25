@@ -1,18 +1,19 @@
 interface CreateCardProps {
+  key: number;
   sectionName: string;
   link: string;
 }
 
-const CreateCard = ({ sectionName, link }: CreateCardProps): JSX.Element => {
+const CreateCard = (laText: CreateCardProps): JSX.Element => {
   return (
-    <a href={link} className="section_card">
+    <a href={laText.link} className="section_card">
       <div className="section_card_inner">
         <h2 className="section_card_title">
-          {sectionName}
+          {laText.sectionName}
         </h2>
       </div>
     </a>
   );
 };
-
+//
 export default CreateCard;
