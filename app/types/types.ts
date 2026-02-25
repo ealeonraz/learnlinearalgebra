@@ -16,7 +16,6 @@ export interface Chapter {
 
 export interface CreateCardProps {
     sectionName: string;
-    sectionInfo: string;
     link: string;
 }
 
